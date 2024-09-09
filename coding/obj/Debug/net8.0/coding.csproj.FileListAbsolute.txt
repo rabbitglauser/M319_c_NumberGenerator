@@ -1,0 +1,14 @@
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\bin\Debug\net8.0\coding.exe
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\bin\Debug\net8.0\coding.deps.json
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\bin\Debug\net8.0\coding.runtimeconfig.json
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\bin\Debug\net8.0\coding.dll
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\bin\Debug\net8.0\coding.pdb
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\coding.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\coding.AssemblyInfoInputs.cache
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\coding.AssemblyInfo.cs
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\coding.csproj.CoreCompileInputs.cache
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\coding.dll
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\refint\coding.dll
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\coding.pdb
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\coding.genruntimeconfig.cache
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\ref\coding.dll
