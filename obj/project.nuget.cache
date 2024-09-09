@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "w7njzCEPi4M=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\samue\\RiderProjects\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\samue\\.nuget\\packages\\ch.gibz.m319.number-generator\\1.0.1\\ch.gibz.m319.number-generator.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

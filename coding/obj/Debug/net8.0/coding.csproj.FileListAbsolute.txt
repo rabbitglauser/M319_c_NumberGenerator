@@ -12,3 +12,4 @@ C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\refint\coding.d
 C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\coding.pdb
 C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\coding.genruntimeconfig.cache
 C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\ref\coding.dll
+C:\Users\samue\RiderProjects\ConsoleApp1\coding\obj\Debug\net8.0\coding.sourcelink.json

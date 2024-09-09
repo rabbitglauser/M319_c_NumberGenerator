@@ -19,8 +19,7 @@ class NumberGuessingGame
 
         int lowerBound = GetBoundary("lower");
         int upperBound = GetBoundary("upper");
-        Random random = new Random();
-        int numberToGuess = random.Next(lowerBound, upperBound + 1);
+        int numberToGuess = NumberGenerator.GenerateNumber(lowerBound, upperBound + 1);
         int userGuess = 0;
         int attempts = 0;
         int maxAttempts = 10;
@@ -42,7 +41,7 @@ class NumberGuessingGame
                 Console.WriteLine($"Please enter a valid number between {lowerBound} and {upperBound}.");
                 continue;
             }
-
+                
             attempts++;
             if (userGuess < numberToGuess)
             {
@@ -78,11 +77,21 @@ class NumberGuessingGame
         {
             Console.Write($"Enter the {boundaryType} boundary for the random number: ");
             string input = Console.ReadLine();
-            if (int.TryParse(input, out boundary)) 
+            if (int.TryParse(input, out boundary))
             {
                 return boundary;
             }
             Console.WriteLine("Please enter a valid number.");
         }
+    }
+}
+
+static class NumberGenerator
+{
+    private static Random random = new Random();
+
+    public static int GenerateNumber(int min, int max)
+    {
+        return random.Next(min, max);
     }
 }
