@@ -4,37 +4,85 @@ class NumberGuessingGame
 {
     static void Main()
     {
-        Random random = new Random();
-        int numberToGuess = random.Next(1, 101); // Random number between 1 and 100
-        int userGuess = 0;
-
-        Console.WriteLine("Welcome to the Number Guessing Game!");
-        Console.WriteLine("I have selected a number between 1 and 100. Can you guess it?");
-
-        while (userGuess != numberToGuess)
+        bool playAgain = true;
+        while (playAgain)
         {
-            Console.Write("Enter your guess: ");
+            PlayGame();
+            playAgain = AskToPlayAgain();
+        }
+    }
+
+    static void PlayGame()
+    {
+        Console.WriteLine("Welcome to the Number Guessing Game!");
+        Console.WriteLine("Instructions: Guess the number between the specified range. You will be notified if your guess is too high or too low. You have a limited number of attempts. Good luck!");
+
+        int lowerBound = GetBoundary("lower");
+        int upperBound = GetBoundary("upper");
+        Random random = new Random();
+        int numberToGuess = random.Next(lowerBound, upperBound + 1);
+        int userGuess = 0;
+        int attempts = 0;
+        int maxAttempts = 10;
+
+        while (userGuess != numberToGuess && attempts < maxAttempts)
+        {
+            Console.Write($"Attempt {attempts + 1}/{maxAttempts}. Enter your guess: ");
             string userInput = Console.ReadLine();
             bool isValidNumber = int.TryParse(userInput, out userGuess);
 
-            if (!isValidNumber)
+            if (userInput?.ToLower() == "exit")
             {
-                Console.WriteLine($"{userGuess}Please enter a valid number.");
+                Console.WriteLine("Exiting the game. Thank you for playing!");
+                return;
+            }
+
+            if (!isValidNumber || userGuess < lowerBound || userGuess > upperBound)
+            {
+                Console.WriteLine($"Please enter a valid number between {lowerBound} and {upperBound}.");
                 continue;
             }
 
+            attempts++;
             if (userGuess < numberToGuess)
             {
-                Console.WriteLine($"{userGuess} :Too low! Try again.");
+                Console.WriteLine("Too low! Try again.");
             }
             else if (userGuess > numberToGuess)
             {
-                Console.WriteLine($"{userGuess} :Too high! Try again.");
+                Console.WriteLine("Too high! Try again.");
             }
-            else
+        }
+
+        if (userGuess == numberToGuess)
+        {
+            Console.WriteLine($"Congratulations! You guessed the correct number: {numberToGuess} in {attempts} attempts.");
+        }
+        else
+        {
+            Console.WriteLine($"You've used all {maxAttempts} attempts. The correct number was: {numberToGuess}. Better luck next time!");
+        }
+    }
+
+    static bool AskToPlayAgain()
+    {
+        Console.Write("Do you want to play again? (yes/no): ");
+        string answer = Console.ReadLine().ToLower();
+        return answer == "yes";
+    }
+
+    static int GetBoundary(string boundaryType)
+    {
+        int boundary;
+        while (true)
+        {
+            Console.Write($"Enter the {boundaryType} boundary for the random number: ");
+            string input = Console.ReadLine();
+            if (int.TryParse(input, out boundary)) 
             {
-                Console.WriteLine($"Congratulations! You guessed the correct number: {numberToGuess}");
+                return boundary;
             }
+            Console.WriteLine("Please enter a valid number.");
         }
     }
 }
